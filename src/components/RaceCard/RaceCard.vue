@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import CountdownTimer from './CountdownTimer.vue'
-import type { Race } from '../types/race'
+import CountdownTimer from '../CountdownTimer'
+import type { Race } from '../../types/race'
 
 interface Props {
   race: Race
@@ -10,7 +10,7 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div class="race-card">
+  <div class="race-card" data-testid="race-card">
     <span class="race-info">{{ race.meeting_name }} - R{{ race.race_number }}</span>
     <CountdownTimer :start-time="race.advertised_start.seconds" />
   </div>
