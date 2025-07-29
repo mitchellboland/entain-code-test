@@ -1,5 +1,35 @@
-# Vue 3 + TypeScript + Vite
+# Next to Go Races
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A Vue 3 application built with Vite that displays upcoming horse, greyhound, and harness races. The app fetches race data from an API and shows countdown timers for each race.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Tech Stack
+
+- **Node.js** - v20.14.0 (required)
+- **Vue 3** - Progressive JavaScript framework
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool and development server
+- **Vitest** - Unit testing framework
+
+## Features
+
+- Real-time race data fetching
+- Filter races by category (All, Greyhound, Harness, Horse)
+- Countdown timers for each race
+- Responsive design
+- Auto-refresh when races are approaching
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Run tests
+npm test
+
+# Build for production
+npm run build
+```

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "test:ui": "vitest --ui"
   },
   "dependencies": {
     "vue": "^3.5.17",
@@ -14,10 +16,13 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
+    "@vue/test-utils": "^2.4.6",
     "@vue/tsconfig": "^0.7.0",
+    "jsdom": "^26.1.0",
     "sass": "^1.89.2",
     "typescript": "~5.8.3",
     "vite": "^7.0.4",
+    "vitest": "^3.2.4",
     "vue-tsc": "^2.2.12"
   }
 }

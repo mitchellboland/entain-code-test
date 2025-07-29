@@ -3,14 +3,17 @@ import { useFetch } from './composables/useFetch'
 import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { RACE_CATEGORIES } from './constants/raceCategories'
 import { sortRacesAscending, filterExpiredRaces, hasRacesAtMinus60 } from './utils/raceUtils'
-import RaceCard from './components/RaceCard.vue'
+import RaceCard from './components/RaceCard'
 
+
+// Created this composable to fetch the races from the API, is a nice way to handle the data fetching and state management
 const { data: races, loading, error, fetchRaces } = useFetch()
 
 const selectedTab = ref<'all' | 'greyhound' | 'harness' | 'horse'>('all')
 
 // Sort and filter races
 const sortedRaces = computed(() => sortRacesAscending(races.value))
+
 const filteredRacesByCategory = computed(() => {
   switch (selectedTab.value) {
     case 'greyhound':
@@ -82,7 +85,7 @@ onUnmounted(() => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .page-container {
   width: calc(100vw - 24px);
   max-width: 1280px;

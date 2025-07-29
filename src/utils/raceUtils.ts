@@ -18,7 +18,8 @@ export function filterExpiredRaces(races: Race[]): Race[] {
   const now = Math.floor(Date.now() / 1000)
   return races.filter(race => {
     const timeSinceStart = now - race.advertised_start.seconds
-    return timeSinceStart < 60 // Keep races that started less than 60 seconds ago
+    // Keep races that started less than 60 seconds ago
+    return timeSinceStart < 60
   })
 }
 
@@ -27,6 +28,7 @@ export function hasRacesAtMinus60(races: Race[]): boolean {
   const now = Math.floor(Date.now() / 1000)
   return races.some(race => {
     const timeSinceStart = now - race.advertised_start.seconds
-    return timeSinceStart === 60 // Exactly 60 seconds past start
+    // Exactly 60 seconds past start
+    return timeSinceStart === 60
   })
 }
