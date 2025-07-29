@@ -33,3 +33,6 @@ npm test
 # Build for production
 npm run build
 ```
+
+
+<img width="872" height="621" alt="app" src="https://github.com/user-attachments/assets/373c5fff-10d1-41da-ae6e-e761901ab785" />
