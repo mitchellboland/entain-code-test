@@ -24,7 +24,7 @@ A Vue 3 application built with Vite that displays upcoming horse, greyhound, and
 # Install dependencies
 npm install
 
-# Start development server
+# Start development server (runs on http://localhost:5173)
 npm run dev
 
 # Run tests
